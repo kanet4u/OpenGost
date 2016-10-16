@@ -120,6 +120,9 @@
   <data name="ArgumentInvalidOffLen" xml:space="preserve">
     <value>Смещение и длина вышли за границы массива или значение счетчика превышает количество элементов от указателя до конца исходной коллекции.</value>
   </data>
+  <data name="ArgumentMustBeOfType" xml:space="preserve">
+    <value>Объект должен иметь тип {0}.</value>
+  </data>
   <data name="ArgumentOutOfRangeIndexLength" xml:space="preserve">
     <value>Индекс и длина должны указывать на позицию в массиве.</value>
   </data>

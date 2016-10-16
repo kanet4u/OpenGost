@@ -184,5 +184,7 @@ namespace OpenGost.Security.Cryptography
 
         internal static BigInteger Normalize(BigInteger value, BigInteger modulus)
             => value >= BigInteger.Zero ? value : value + modulus;
+
+        internal static int CombineHash(int hash1, int hash2) => (hash1 << 7 | hash1 >> 25) ^ hash2;
     }
 }

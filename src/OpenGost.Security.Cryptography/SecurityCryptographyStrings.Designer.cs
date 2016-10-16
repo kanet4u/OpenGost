@@ -69,6 +69,15 @@ namespace OpenGost.Security.Cryptography {
         }
         
         /// <summary>
+        ///    Looks up a localized string similar to Object must be of type {0}..
+        /// </summary>
+        public static string ArgumentMustBeOfType {
+            get {
+                return ResourceManager.GetString("ArgumentMustBeOfType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///    Looks up a localized string similar to Index and length must refer to a location within the array..
         /// </summary>
         public static string ArgumentOutOfRangeIndexLength {
