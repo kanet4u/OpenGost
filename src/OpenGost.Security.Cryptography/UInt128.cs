@@ -140,7 +140,22 @@ namespace OpenGost.Security.Cryptography
 
         private static UInt128 Multiply(ulong left, ulong right)
         {
-            throw new NotImplementedException();
+            ulong u1 = (uint)left;
+            ulong v1 = (uint)right;
+            ulong t = u1 * v1;
+            ulong w3 = (uint)t;
+            ulong k = (t >> 32);
+
+            left >>= 32;
+            t = (left * v1) + k;
+            k = (uint)t;
+            ulong w1 = (t >> 32);
+
+            right >>= 32;
+            t = (u1 * right) + k;
+            k = (t >> 32);
+
+            return new UInt128((left * right) + w1 + k, (t << 32) + w3);
         }
 
         public static UInt128 Divide(UInt128 dividend, UInt128 divisor)

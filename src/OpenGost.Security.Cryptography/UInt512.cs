@@ -152,7 +152,22 @@ namespace OpenGost.Security.Cryptography
 
         private static UInt512 Multiply(UInt256 left, UInt256 right)
         {
-            throw new NotImplementedException();
+            UInt256 u1 = (UInt128)left;
+            UInt256 v1 = (UInt128)right;
+            UInt256 t = u1 * v1;
+            UInt256 w3 = (UInt128)t;
+            UInt256 k = (t >> 128);
+
+            left >>= 128;
+            t = (left * v1) + k;
+            k = (UInt128)t;
+            UInt256 w1 = (t >> 128);
+
+            right >>= 128;
+            t = (u1 * right) + k;
+            k = (t >> 128);
+
+            return new UInt512((left * right) + w1 + k, (t << 128) + w3);
         }
 
         public static UInt512 Divide(UInt512 dividend, UInt512 divisor)
