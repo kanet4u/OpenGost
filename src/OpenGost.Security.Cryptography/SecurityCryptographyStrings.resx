@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArgumentInvalidArrayLength" xml:space="preserve">
+    <value>Length of the array must be {0}.</value>
+  </data>
   <data name="ArgumentInvalidOffLen" xml:space="preserve">
     <value>Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection.</value>
   </data>
@@ -227,5 +230,23 @@
   </data>
   <data name="CryptographicUnknownSymmetricAlgorithm" xml:space="preserve">
     <value>'{0}' is not a known symmetric algorithm.</value>
+  </data>
+  <data name="OverflowInt32" xml:space="preserve">
+    <value>Value was either too large or too small for an Int32.</value>
+  </data>
+  <data name="OverflowInt64" xml:space="preserve">
+    <value>Value was either too large or too small for an Int64.</value>
+  </data>
+  <data name="OverflowUInt128" xml:space="preserve">
+    <value>Value was either too large or too small for a UInt128.</value>
+  </data>
+  <data name="OverflowUInt256" xml:space="preserve">
+    <value>Value was either too large or too small for a UInt256.</value>
+  </data>
+  <data name="OverflowUInt32" xml:space="preserve">
+    <value>Value was either too large or too small for a UInt32.</value>
+  </data>
+  <data name="OverflowUInt64" xml:space="preserve">
+    <value>Value was either too large or too small for a UInt64.</value>
   </data>
 </root>

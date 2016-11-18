@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArgumentInvalidArrayLength" xml:space="preserve">
+    <value>Длина массива должна равняться {0}.</value>
+  </data>
   <data name="ArgumentInvalidOffLen" xml:space="preserve">
     <value>Смещение и длина вышли за границы массива или значение счетчика превышает количество элементов от указателя до конца исходной коллекции.</value>
   </data>
@@ -227,5 +230,23 @@
   </data>
   <data name="CryptographicUnknownSymmetricAlgorithm" xml:space="preserve">
     <value>"{0}" - неизвестный симметричный алгоритм.</value>
+  </data>
+  <data name="OverflowInt32" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для Int32.</value>
+  </data>
+  <data name="OverflowInt64" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для Int64.</value>
+  </data>
+  <data name="OverflowUInt128" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для UInt128.</value>
+  </data>
+  <data name="OverflowUInt256" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для UInt256.</value>
+  </data>
+  <data name="OverflowUInt32" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для UInt32.</value>
+  </data>
+  <data name="OverflowUInt64" xml:space="preserve">
+    <value>Значение было недопустимо малым или недопустимо большим для UInt64.</value>
   </data>
 </root>

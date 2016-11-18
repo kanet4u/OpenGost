@@ -136,6 +136,23 @@ namespace OpenGost.Security.Cryptography
         internal static unsafe uint UInt32FromBigEndian(byte* block)
             => (uint)(*block << 24) | (uint)(block[1] << 16) | (uint)(block[2] << 8) | (block[3]);
 
+        [SecuritySafeCritical]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static ulong UInt64FromLittleEndian(byte[] input, int offset)
+        {
+            unsafe
+            {
+                fixed (byte* block = input)
+                    return UInt64FromLittleEndian(block + offset);
+            }
+        }
+
+        [SecurityCritical]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal static unsafe ulong UInt64FromLittleEndian(byte* block)
+            => *block | (uint)(block[1] << 8) | (uint)(block[2] << 16) | (uint)(block[3] << 24) |
+                (uint)(block[4] << 32) | (uint)(block[5] << 40) | (uint)(block[6] << 48) | (uint)(block[7] << 56);
+
         internal static byte[] ToNormalizedByteArray(BigInteger value, int size)
         {
             if (value < BigInteger.Zero)

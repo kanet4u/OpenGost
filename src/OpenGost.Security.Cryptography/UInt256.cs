@@ -20,10 +20,8 @@ namespace OpenGost.Security.Cryptography
 
         public static UInt256 MaxValue => s_maxValue;
 
-        public UInt256(int value)
-        {
-            throw new NotImplementedException();
-        }
+        public UInt256(int value) : this(0, checked((UInt128)value))
+        { }
 
         public UInt256(uint value)
         {
@@ -31,10 +29,8 @@ namespace OpenGost.Security.Cryptography
             _high = 0;
         }
 
-        public UInt256(long value)
-        {
-            throw new NotImplementedException();
-        }
+        public UInt256(long value) : this(0, checked((UInt128)value))
+        { }
 
         public UInt256(ulong value)
         {
@@ -66,11 +62,14 @@ namespace OpenGost.Security.Cryptography
         public UInt256(byte[] value)
         {
             if (value == null) throw new ArgumentNullException(nameof(value));
+            if (value.Length != 32)
+                throw new ArgumentException(string.Format(Culture, ArgumentInvalidArrayLength, 32), nameof(value));
 
-            throw new NotImplementedException();
+            _high = new UInt128(UInt64FromLittleEndian(value, 24), UInt64FromLittleEndian(value, 16));
+            _low = new UInt128(UInt64FromLittleEndian(value, 8), UInt64FromLittleEndian(value, 0));
         }
 
-        private UInt256(UInt128 high, UInt128 low)
+        internal UInt256(UInt128 high, UInt128 low)
         {
             _low = low;
             _high = high;
@@ -218,27 +217,42 @@ namespace OpenGost.Security.Cryptography
 
         public static explicit operator int(UInt256 value)
         {
-            throw new NotImplementedException();
+            if (value._high != 0)
+                throw new OverflowException(OverflowInt32);
+
+            return checked((int)value._low);
         }
 
         public static explicit operator uint(UInt256 value)
         {
-            throw new NotImplementedException();
+            if (value._high != 0)
+                throw new OverflowException(OverflowUInt32);
+
+            return checked((uint)value._low);
         }
 
         public static explicit operator long(UInt256 value)
         {
-            throw new NotImplementedException();
+            if (value._high != 0)
+                throw new OverflowException(OverflowInt64);
+
+            return checked((long)value._low);
         }
 
         public static explicit operator ulong(UInt256 value)
         {
-            throw new NotImplementedException();
+            if (value._high != 0)
+                throw new OverflowException(OverflowUInt64);
+
+            return checked((ulong)value._low);
         }
 
         public static explicit operator UInt128(UInt256 value)
         {
-            throw new NotImplementedException();
+            if (value._high != 0)
+                throw new OverflowException(OverflowUInt128);
+
+            return value._low;
         }
 
         public static explicit operator float(UInt256 value) => (float)(double)value;

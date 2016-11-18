@@ -60,6 +60,15 @@ namespace OpenGost.Security.Cryptography {
         }
         
         /// <summary>
+        ///    Looks up a localized string similar to Length of the array must be {0}..
+        /// </summary>
+        public static string ArgumentInvalidArrayLength {
+            get {
+                return ResourceManager.GetString("ArgumentInvalidArrayLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///    Looks up a localized string similar to Offset and length were out of bounds for the array or count is greater than the number of elements from index to the end of the source collection..
         /// </summary>
         public static string ArgumentInvalidOffLen {
@@ -389,6 +398,60 @@ namespace OpenGost.Security.Cryptography {
         public static string CryptographicUnknownSymmetricAlgorithm {
             get {
                 return ResourceManager.GetString("CryptographicUnknownSymmetricAlgorithm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for an Int32..
+        /// </summary>
+        public static string OverflowInt32 {
+            get {
+                return ResourceManager.GetString("OverflowInt32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for an Int64..
+        /// </summary>
+        public static string OverflowInt64 {
+            get {
+                return ResourceManager.GetString("OverflowInt64", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for a UInt128..
+        /// </summary>
+        public static string OverflowUInt128 {
+            get {
+                return ResourceManager.GetString("OverflowUInt128", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for a UInt256..
+        /// </summary>
+        public static string OverflowUInt256 {
+            get {
+                return ResourceManager.GetString("OverflowUInt256", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for a UInt32..
+        /// </summary>
+        public static string OverflowUInt32 {
+            get {
+                return ResourceManager.GetString("OverflowUInt32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///    Looks up a localized string similar to Value was either too large or too small for a UInt64..
+        /// </summary>
+        public static string OverflowUInt64 {
+            get {
+                return ResourceManager.GetString("OverflowUInt64", resourceCulture);
             }
         }
     }
