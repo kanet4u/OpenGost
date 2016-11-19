@@ -3,6 +3,7 @@
 namespace OpenGost.Security.Cryptography
 {
     using static CryptoUtils;
+    using static NumericsHelpers;
     using static SecurityCryptographyStrings;
 
     internal struct UInt256 : IComparable, IComparable<UInt256>, IEquatable<UInt256>, IFormattable

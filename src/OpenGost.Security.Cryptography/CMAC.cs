@@ -7,10 +7,11 @@ namespace OpenGost.Security.Cryptography
 {
     using static Buffer;
 #if NET45
-    using static CryptoConfig; 
+    using static CryptoConfig;
 #endif
     using static CryptoConstants;
     using static CryptoUtils;
+    using static NumericsHelpers;
     using static SecurityCryptographyStrings;
 
     /// <summary>

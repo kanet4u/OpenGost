@@ -8,6 +8,7 @@ namespace OpenGost.Security.Cryptography
 {
     using static Buffer;
     using static CryptoUtils;
+    using static NumericsHelpers;
 
     public class SymmetricTransformTests
     {

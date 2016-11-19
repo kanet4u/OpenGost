@@ -7,7 +7,7 @@ using System.Security;
 namespace OpenGost.Security.Cryptography
 {
     using static Buffer;
-    using static CryptoUtils;
+    using static NumericsHelpers;
 
     /// <summary>
     /// Computes the <see cref="Streebog512"/> hash for the input data using the managed implementation. 

@@ -5,8 +5,9 @@ using System.Security.Cryptography;
 namespace OpenGost.Security.Cryptography
 {
     using static Buffer;
-    using static SecurityCryptographyStrings;
     using static CryptoUtils;
+    using static NumericsHelpers;
+    using static SecurityCryptographyStrings;
 
     /// <summary>
     /// Represents the abstract class from which implementations of symmetric algorithm

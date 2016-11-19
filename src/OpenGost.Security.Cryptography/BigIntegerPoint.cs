@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 namespace OpenGost.Security.Cryptography
 {
     using static CryptoUtils;
+    using static NumericsHelpers;
 
     internal struct BigIntegerPoint
     {

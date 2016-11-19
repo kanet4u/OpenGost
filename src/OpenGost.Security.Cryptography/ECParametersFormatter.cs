@@ -11,8 +11,8 @@ using System.Xml.Schema;
 
 namespace OpenGost.Security.Cryptography
 {
-    using static CryptoUtils;
     using static ECCurve;
+    using static NumericsHelpers;
     using static SecurityCryptographyStrings;
 
     internal static class ECParametersFormatter

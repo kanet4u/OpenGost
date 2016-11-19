@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 namespace OpenGost.Security.Cryptography
 {
     using static CryptoUtils;
+    using static NumericsHelpers;
 
     /// <summary>
     /// Performs a cryptographic transformation of data using the <see cref="Magma"/> algorithm.
